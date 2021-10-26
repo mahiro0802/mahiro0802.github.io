@@ -1,0 +1,121 @@
+html, body{
+    font-family: 'Kosugi Maru', sans-serif;
+    background-color: #c0e4f2;
+    height: 100%;
+}
+#waaa{
+    /*height: 100%;*/
+    text-align: center;
+    background-color: #c0e4f2;
+}
+.bk{
+    display: none;
+}
+
+#li{
+    font-size: 20px;
+    bottom: 0;
+    background-color: red;
+    color: white;
+    width: 100%;
+    text-align: --webkit-match-parent;
+    /*display: none;*/
+    text-align: center;
+    list-style: none;
+}
+#iconn{
+    background: url("apple.png") no-repeat left center;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+}
+
+#info{
+    overflow: auto;
+}
+.navbar-brand{
+    font-size: 25px;
+}
+.backimg{
+    background-image: url(apple.png);
+}
+#pr{
+    font-size: 16px;
+    text-align: center;
+    background-color: red;
+}
+#inner{
+    max-width: 90%;
+    text-align: center;
+    height: 100%;
+    background-color: #fff7c9;
+    margin: 0 auto;
+}
+.link{
+    background-color: white;
+}
+#twitter_main{
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+}
+.back{
+    height: 93%;
+    max-width: 90%;
+    text-align: center;
+    background-color: #fff7c9;
+    /*background-image: url(back.png);
+    background-repeat: repeat;*/
+    margin: 0 auto;
+}
+.clm-header{
+    float: left;
+    font-size: 30px;
+    text-align: left;
+}
+.grid-item {
+    float: left;
+    /*width: 500px;
+    height: 200px;*/
+    text-align: left;
+    vertical-align: top;
+}
+
+.grid{
+    vertical-align: top;
+    text-align: left;
+    margin: 0 auto;
+    height: 100%;
+}
+.clm-s{
+    font-size: 18px;
+    width: 530px;
+    height: 280px;
+    float: left;
+    text-align: left;
+    vertical-align: top;
+}
+/*.yt{
+    width: 450px;
+    height: 255px;
+}*/
+#wakoku{
+    /*float: left;*/
+    text-align: left;
+    vertical-align: top;
+    }
+.cas{
+    width: 450px;
+    height: 255px;
+}
+.iphone > .twcas, .android > .twcas{
+    display: none;
+}
+
+/*@media only screen and (min-width : 768px){
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu{
+    }
+}*/

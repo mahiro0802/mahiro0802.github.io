@@ -1,0 +1,35 @@
+body{
+    background-color: gray;
+}
+#header,.user_info,.sns{
+    display: flex;
+}
+#dev{
+    float: right;
+}
+.player{
+    overflow: hidden;
+}
+.name{
+    font-weight: bold;
+    font-size: 24px;
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tw-horizontal-layout__item{
+    display: none !important;
+}
+a{
+    color: white;
+}
+*{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+body{
+    overflow: hidden;
+}
+.user{
+    padding: 4px 4px 4px 4px;
+}

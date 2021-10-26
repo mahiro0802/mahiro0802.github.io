@@ -1,0 +1,30 @@
+{
+    "site":[
+        {
+            "name":"Twitter",
+            "url":[
+                {
+                    "name":"メインアカウント",
+                    "url":"https://twitter.com/mahiro_m4a"
+                },
+                {
+                    "name":"サブアカウント",
+                    "url":"https://twitter.com/_yarukinai_"
+                }
+            ]
+        },
+        {
+            "name":"配信サイト",
+            "url":[
+                {
+                    "name":"Twitch",
+                    "url":"https://twitch.tv/mahiro_m4a"
+                },
+                {
+                    "name":"ツイキャス",
+                    "url":"https://twitcasting.tv/mahiro_m4a"
+                }
+            ]
+        }
+    ]
+}

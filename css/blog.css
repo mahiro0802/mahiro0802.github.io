@@ -1,0 +1,16 @@
+.in{
+    text-align: left;
+}
+#ar{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+}
+.arr{
+    margin: 0 auto;
+    text-align: center;
+}
+#inner{
+    text-align: center;
+    margin: 0 auto;
+}

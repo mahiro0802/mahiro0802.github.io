@@ -1,0 +1,17 @@
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#hed{
+    display: flex;
+}
+.sns,.user_info{
+    display: flex;
+}
+.name{
+    font-weight: bold;
+}
+body{
+    overflow: hidden;
+}

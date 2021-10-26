@@ -1,0 +1,21 @@
+.title{
+    font-size: 80px;
+}
+body{
+    text-align: center;
+}
+.main{
+    /*max-width: 40%;*/
+    text-align: center;
+}
+.form{
+    text-align: center;
+    width: 100%;
+}
+.disp{
+    text-align: center;
+}
+#textarea{
+    height: 150px;
+    width: 30%;
+}
