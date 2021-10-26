@@ -1,20 +1,10 @@
-function load_action(){
+function load(){
     console.log(this.responseText);
-    var jsss = JSON.parse(this.responseText);
-
-    for(i=0;i<jsss.site.length;i++){
-        //console.log(jsss.length);
-		console.log(jsss.site[i].name);
-	}
+    document.getElementsByTagName("nav")[0].innerHTML = this.responseText;
 }
-function json_load(){
+window.onload = function() {
     var req = new XMLHttpRequest();
-    req.addEventListener("load",load_action);
-    req.open("GET","./js/header.json");
+    req.addEventListener("load",load);
+    req.open("GET","html/header.html");
     req.send();
-    console.log(req.responseText);
-}
-window.onload = function(){
-    json_load();
-
 }

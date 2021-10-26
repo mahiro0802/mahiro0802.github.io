@@ -54,13 +54,8 @@ html, body{
 .link{
     background-color: white;
 }
-#twitter_main{
-    text-align: left;
-    vertical-align: top;
-    font-size: 20px;
-}
 .back{
-    height: 93%;
+    height: 100%;
     max-width: 90%;
     text-align: center;
     background-color: #fff7c9;
@@ -88,34 +83,18 @@ html, body{
     height: 100%;
 }
 .clm-s{
-    font-size: 18px;
-    width: 530px;
-    height: 280px;
-    float: left;
-    text-align: left;
-    vertical-align: top;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
 }
-/*.yt{
-    width: 450px;
-    height: 255px;
-}*/
-#wakoku{
-    /*float: left;*/
-    text-align: left;
-    vertical-align: top;
-    }
-.cas{
-    width: 450px;
-    height: 255px;
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 98%;
+    height: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
 }
-.iphone > .twcas, .android > .twcas{
-    display: none;
-}
-
-/*@media only screen and (min-width : 768px){
-    .dropdown:hover .dropdown-menu{
-        display: block;
-    }
-    .dropdown-menu{
-    }
-}*/

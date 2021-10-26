@@ -1,0 +1,12 @@
+.switch{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content-item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 auto;
+    height: 500px;
+    text-align: center;
+}
