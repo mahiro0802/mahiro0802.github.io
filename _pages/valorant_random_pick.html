@@ -4,11 +4,12 @@ title: "Valorantランダムピック"
 ---
 
 <script src="assets/js/valorant_random_pick.js"></script>
+<p id="json" hidden></p>
 <section class="section pt-5">
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-12 text-center">
-                <h3 class="section-title">Valorantのエージェントをランダムでピックします</h2>
+                <h3>Valorantのエージェントをランダムでピックします</h2>
             </div>
             <div class="enable-check text-center">
                 <div class="description">ランダムの対象となるエージェントを選択してください</div>
@@ -19,8 +20,7 @@ title: "Valorantランダムピック"
                 <button class="btn btn-primary" type="button" onclick="random_pic()">実行</button>
             </div>
             <div class="grid">
-                <div id="output" class="text-center">
-                </div>
+                <div id="output" class="text-center"></div>
             </div>
         </div>
     </div>

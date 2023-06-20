@@ -24,15 +24,34 @@ body{
     width: 100%;
 }
 #output{
+    overflow-x: auto;
     width: 100%;
     display: flex;
     justify-self: center;
 }
 .grid{
     display: grid;
+    height: 560px;
 }
 .agent{
     width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .agent-image{
     width: 100%;

@@ -31,6 +31,21 @@ function random_push(name,id,role){
     output.appendChild(agent_div);
 }
 
+async function nameserch(randomIndexes){
+    var jsondata = document.getElementById("json").textContent;
+    var data = JSON.parse(jsondata);
+    for(var i = 0; i < randomIndexes.length; i++){
+        console.log(data["agents"][randomIndexes[i]]["name"])
+        console.log(randomIndexes[i]);
+        random_push(data["agents"][randomIndexes[i]]["name"],data["agents"][randomIndexes[i]]["id"],data["agents"][randomIndexes[i]]["role"]);
+        await sleep(0.1);
+    }
+}
+
+async function sleep(second){
+    return new Promise(resolve => setTimeout(resolve, second * 1000));
+}
+
 function random_pic(){
     //numberboxの数を取得
     var num = document.getElementById("numberbox").value;
@@ -46,7 +61,7 @@ function random_pic(){
     //チェックが入っている項目を配列に追加
     for (var i = 0; i < checkboxes.length; i++){
         if(checkboxes[i].checked){
-            checkedItems.push(checkboxes[i].value);
+            checkedItems.push(i);
         }
     }
 
@@ -59,53 +74,57 @@ function random_pic(){
             //チェックが入っている項目からランダムに抽出
             var randomIndex = Math.floor(Math.random() * checkedItems.length);
             //もしランダム結果の配列に存在していない場合
-            if(!randomIndexes.includes(randomIndex)){
+            if(!randomIndexes.includes(checkedItems[randomIndex])){
                 //ランダム結果の配列に追加
-                randomIndexes.push(randomIndex);
+                randomIndexes.push(checkedItems[randomIndex]);
             }
         }
-        get_json().then((data)=>{
-            for(var i = 0; i < randomIndexes.length; i++){
-                console.log(data["agents"][randomIndexes[i]]["name"])
-                console.log(randomIndexes[i]);
-                random_push(data["agents"][randomIndexes[i]]["name"],data["agents"][randomIndexes[i]]["id"],data["agents"][randomIndexes[i]]["role"]);
-            }
-        });
+        nameserch(randomIndexes);
     } else {
-        alert('5個以上チェックを入れてください');
+        alert('なぞのエラーだ！');
     }
 }
 
 
 function add_checkbox(){
-    var check_div = document.getElementById("checkbox");
-    var jsonData = get_json().then((data) => {
-        data["agents"].forEach(function(item) {
-            var label = document.createElement("label");
-            label.setAttribute("class","check-label");
+    var jsondata = document.getElementById("json").textContent;
+    var data = JSON.parse(jsondata);
+    data["agents"].forEach(function(item) {
+        var label = document.createElement("label");
+        label.setAttribute("class","check-label");
 
-            var checkbox = document.createElement("input");
-            checkbox.setAttribute("class","check");
-            checkbox.setAttribute("type","checkbox");
-            checkbox.setAttribute("name","agent");
-            checkbox.setAttribute("value",item.id);
-            checkbox.setAttribute("checked",true);
-            label.appendChild(checkbox);
+        var checkbox = document.createElement("input");
+        checkbox.setAttribute("class","check");
+        checkbox.setAttribute("type","checkbox");
+        checkbox.setAttribute("name","agent");
+        checkbox.setAttribute("value",item.id);
+        checkbox.setAttribute("checked",true);
+        label.appendChild(checkbox);
 
-            var text = document.createElement("p");
-            text.textContent = item.name;
+        var text = document.createElement("p");
+        text.textContent = item.name;
 
-            label.appendChild(text);
-            check_div.appendChild(label);
-        })
+        label.appendChild(text);
+
+        var check_div = document.getElementById("checkbox");
+        check_div.appendChild(label);
     });
 }
 
 async function get_json() {
-    var response = await fetch("assets/json/valorant.json");
-    return await response.json()
+    await fetch("assets/json/valorant.json")
+        .then(function(response) {
+            if(response.ok){
+                return response.text();
+            }
+        })
+        .then(function(data) {
+            document.getElementById("json").textContent = data;
+            console.log("process_comp")
+        });
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    add_checkbox();
+document.addEventListener("DOMContentLoaded", async function(){
+    await get_json();
+    await add_checkbox();
 });
