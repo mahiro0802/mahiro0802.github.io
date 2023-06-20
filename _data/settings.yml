@@ -85,7 +85,7 @@ work-process:
 
 skills-title: スキル
 skills:
-  - { name: "ウェブデザイン", color: "#fdb157", value: "10%" }
+  - { name: "ウェブページ制作", color: "#fdb157", value: "10%" }
   - { name: "Valorant", color: "#9473e6", value: "30%" }
   - { name: "動画編集", color: "#bdecf6", value: "20%" }
   - { name: OBS, color: "#ffbcaa", value: "70%" }
