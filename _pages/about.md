@@ -1,18 +1,24 @@
 ---
 layout: about
 title: About Me
-author: Johnathan Smith
+author: mahiro
 image: assets/images/about/author.jpg
-signature: assets/images/about/signature.png
+#signature: assets/images/about/signature.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat.
+2006年8月2日生まれ
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident.
+PC環境の構築・配信・ゲーム・旅などが好き
 
-Deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.
+初めてPCを触ったのは5歳のころ、家のPCで音楽を聞くことから始めた。<br>
+夜になり、親も就寝したところで勝手にPCを開き、Googleストリートビューで行きたい場所に飛び回って遊んでいた。<br>
+だがしかし、それが親にバレてしまいパスワードをかけられてしまう。
+
+11歳(小5)になり、PCのパスワードを解読した僕はSNSの世界に足を踏み入れる。<br>
+そこで待っていた世界に感動し、いろいろと発信するようになった(黒歴史)。
+
+13歳(中1)の春に自分用のPC(5歳のころに触っていたもの)をもらい、分解等するようになった。<br>
+ここで、中学の教員からパワハラを受け、周りの人間とも疎遠になったことから不登校になってしまう。<br>
+その冬、誕生日やクリスマスプレゼント、SNSで繋がった人達からもらったPCパーツを寄せ集め、初めての自作PCを経験する。<br>
+
+ここから世界は格段に広がり、FPSゲームや動画編集等、今までできなかったことができるようになり今に至る。

@@ -1,0 +1,47 @@
+body{
+    width: 100%;
+}
+.enable-check{
+    width: 100%;
+}
+.check-label{
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+}
+.check{
+    height: 100%;
+}
+#checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.number{
+    width: 40px;
+}
+.enter-button{
+    width: 100%;
+}
+#output{
+    width: 100%;
+    display: flex;
+    justify-self: center;
+}
+.grid{
+    display: grid;
+}
+.agent{
+    width: 300px;
+}
+.agent-image{
+    width: 100%;
+}
+.agent-name{
+    width: 100%;
+    font-size: 26px;
+}
+.agent-role{
+    width: 100%;
+    font-size: 16px;
+}
