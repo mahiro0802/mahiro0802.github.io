@@ -169,11 +169,11 @@ skills:
 
 # Portfolio Home Section
 portfolio-home-items:
-  - image: "assets/images/portfolio/item-1.png"
-    url: "#"
+  - image: "assets/images/portfolio/valorant_random_pick.png"
+    url: "valorant_random_pick"
 
-  - image: "assets/images/portfolio/item-2.png"
-    url: "#"
+  - image: "assets/images/portfolio/multi_twicas_viewer.png"
+    url: "multi_twicas_viewer"
 
 # Portfolio Page
 portfolio-label:
@@ -181,12 +181,12 @@ portfolio-label:
   - { title: "Live Streaming", type: "live" }
 
 portfolio-items:
-  - image: "assets/images/portfolio/item-2.png"
+  - image: "assets/images/portfolio/valorant_random_pick.png"
     url: "valorant_random_pick"
     portfolio-type:
       - type: "game"
 
-  - image: "assets/images/portfolio/item-1.png"
+  - image: "assets/images/portfolio/multi_twicas_viewer.png"
     url: "https://mahiro0802.github.io/multi_twicas_viewer"
     portfolio-type:
       - type: "live"
