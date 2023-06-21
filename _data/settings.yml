@@ -14,7 +14,7 @@ description: 作ってるの意味のないサイト
 menu:
   - { name: About, link: "/about" }
   - { name: Blog, link: "/blog" }
-  - { name: Portfolio, link: "/portfolio" }
+  - { name: Project, link: "/project" }
 #  - { name: Contact, link: "/contact" }
 
 #-------------------------------
