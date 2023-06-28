@@ -31,7 +31,7 @@ function random_push(name,id,role){
     output.appendChild(agent_div);
 }
 
-async function nameserch(randomIndexes){
+async function nameserch(randomIndexes,checklength){
     var jsondata = document.getElementById("json").textContent;
     var data = JSON.parse(jsondata);
     var agents = [];
@@ -47,7 +47,7 @@ async function nameserch(randomIndexes){
     }
     var split_agent = agents.join("%0a");
     var tweetbutton = document.getElementById("tweetlink");
-    tweetbutton.setAttribute("href","https://twitter.com/share?url=https://mahiro0802.github.io/valorant_random_pick.html&text=ランダムピックの結果は…%0a%0a" + split_agent + "%0a%0aでした！&hashtags=Valorantランダムピック,Valorant");
+    tweetbutton.setAttribute("href","https://twitter.com/share?url=https://mahiro0802.github.io/valorant_random_pick.html&text=ランダムピックの結果は…%0a%0a" + split_agent + "%0a%0aでした！(選択エージェント数：" + String(checklength) + "、抽出数："+ String(agents.length) +")&hashtags=Valorantランダムピック,Valorant");
 }
 
 async function sleep(second){
@@ -87,7 +87,7 @@ function random_pic(){
                 randomIndexes.push(checkedItems[randomIndex]);
             }
         }
-        nameserch(randomIndexes);
+        nameserch(randomIndexes,checkedItems.length);
     } else {
         alert('なぞのエラーだ！');
     }
