@@ -38,12 +38,16 @@ async function nameserch(randomIndexes){
     for(var i = 0; i < randomIndexes.length; i++){
         console.log(data["agents"][randomIndexes[i]]["name"])
         console.log(randomIndexes[i]);
-        agents.push(data[i]);
+        agents.push(data["agents"][randomIndexes[i]]["name"]);
         random_push(data["agents"][randomIndexes[i]]["name"],data["agents"][randomIndexes[i]]["id"],data["agents"][randomIndexes[i]]["role"]);
         await sleep(0.1);
     }
+    for(var i = 0; i < agents.length; i++){
+        console.log(agents[i]);
+    }
+    var split_agent = agents.join("%0a");
     var tweetbutton = document.getElementById("tweetlink");
-    tweetbutton.setAttribute("href","https://twitter.com/share?url=https://mahiro0802.github.io/valorant_random_pick.html&amp;text=ランダムピックの結果は…\n" + agents.join("・") + "\nでした！");
+    tweetbutton.setAttribute("href","https://twitter.com/share?url=https://mahiro0802.github.io/valorant_random_pick.html&text=ランダムピックの結果は…%0a%0a" + split_agent + "%0a%0aでした！&hashtags=Valorantランダムピック,Valorant");
 }
 
 async function sleep(second){
