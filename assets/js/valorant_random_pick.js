@@ -42,8 +42,8 @@ async function nameserch(randomIndexes){
         random_push(data["agents"][randomIndexes[i]]["name"],data["agents"][randomIndexes[i]]["id"],data["agents"][randomIndexes[i]]["role"]);
         await sleep(0.1);
     }
-    var tweetbutton = document.getElementsByClassName("twitter-shere-button")[0];
-    tweetbutton.setAttribute("data-text","ランダムピックの結果は…\n" + agents.join("・") + "\nでした！");
+    var tweetbutton = document.getElementById("tweetlink");
+    tweetbutton.setAttribute("href","https://twitter.com/share?url=https://mahiro0802.github.io/valorant_random_pick.html&amp;text=ランダムピックの結果は…\n" + agents.join("・") + "\nでした！");
 }
 
 async function sleep(second){
