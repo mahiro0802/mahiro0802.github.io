@@ -1,27 +1,25 @@
-<head>
+<head prefix="og: https://ogp.me/ns#">
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} - {{ site.data.settings.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="{%if page.description%}{{page.description}}{%else%}{{site.data.settings.description}}{%endif%}">
+  <meta name="description" content="{%if page.description %}{{page.description}}{% else %}{{site.data.settings.description}}{% endif %}">
 
   <!-- ogp -->
-  <head prefix="og: https://ogp.me/ns#">
   <meta property="og:url" content="{{site.url}}{{page.url}}" />
-  {%if page.type %}
-  <meta property="og:type" content="page.type" />
-  {% endif %}
   <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.data.settings.title }}{% else %}{{ site.data.settings.title }}{% endif %}" />
-  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:site_name" content="{{ page.title }} | {{site.data.settings.title}}" />
 
-  <meta property="og:description" content="{%if page.description%}{{page.description}}{%else%}{{site.data.settings.description}}{%endif%}" />
+  <meta property="og:description" content="{%if page.description%}{{page.description}}{% else %}{{site.data.settings.description}}{%endif%}" />
 
-  {%if page.type %}
-  <meta property="og:type" content="page.type">
-  {% endif %}
+  <meta property="og:type" content="{% if page.type %}{{page.type}}{% else %}article{% endif %}">
 
-  <meta property="og:image" content=" サムネイル画像のURL" />
+  <meta property="og:image" content="{% if page.image %}{{site.url}}/{{page.image}}{% else %}https://mahiro0802.github.io/assets/images/favicon.png{% endif %}" />
+
+  <!-- twitter card-->
+  <meta name="twitter:card" content="{% if page.twittercard %}{{page.twittercard}}{% else %}summary{% endif %}" />
+  <meta name="twitter:site" content="@mahiro7429" />
 
   <!-- theme meta -->
   <meta name="theme-name" content="kross-jekyll" />

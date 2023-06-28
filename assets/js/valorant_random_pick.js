@@ -34,12 +34,16 @@ function random_push(name,id,role){
 async function nameserch(randomIndexes){
     var jsondata = document.getElementById("json").textContent;
     var data = JSON.parse(jsondata);
+    var agents = [];
     for(var i = 0; i < randomIndexes.length; i++){
         console.log(data["agents"][randomIndexes[i]]["name"])
         console.log(randomIndexes[i]);
+        agents.push(data[i]);
         random_push(data["agents"][randomIndexes[i]]["name"],data["agents"][randomIndexes[i]]["id"],data["agents"][randomIndexes[i]]["role"]);
         await sleep(0.1);
     }
+    var tweetbutton = document.getElementsByClassName("twitter-shere-button")[0];
+    tweetbutton.setAttribute("data-text","ランダムピックの結果は…\n" + agents.join("・") + "\nでした！");
 }
 
 async function sleep(second){
