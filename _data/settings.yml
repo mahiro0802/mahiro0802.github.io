@@ -170,7 +170,7 @@ skills:
 # Portfolio Home Section
 portfolio-home-items:
   - image: "assets/images/portfolio/valorant_random_pick.png"
-    url: "valorant_random_pick"
+    url: "valorant_random_pick.html"
 
   - image: "assets/images/portfolio/multi_twicas_viewer.png"
     url: "multi_twicas_viewer"
@@ -182,7 +182,7 @@ portfolio-label:
 
 portfolio-items:
   - image: "assets/images/portfolio/valorant_random_pick.png"
-    url: "valorant_random_pick"
+    url: "/valorant_random_pick.html"
     portfolio-type:
       - type: "game"
 

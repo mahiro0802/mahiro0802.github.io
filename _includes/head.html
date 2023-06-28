@@ -9,11 +9,16 @@
   <!-- ogp -->
   <head prefix="og: https://ogp.me/ns#">
   <meta property="og:url" content="{{site.url}}{{page.url}}" />
-  <meta property="og:type" content=" ページの種類" />
-  <meta property="og:title" content=" ページのタイトル" />
+  {%if page.type %}
+  <meta property="og:type" content="page.type" />
+  {% endif %}
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.data.settings.title }}{% else %}{{ site.data.settings.title }}{% endif %}" />
   <meta property="og:site_name" content="サイト名" />
-  {%if page.description %}
-  <meta property="og:description" content=" ページの説明文" />
+
+  <meta property="og:description" content="{%if page.description%}{{page.description}}{%else%}{{site.data.settings.description}}{%endif%}" />
+
+  {%if page.type %}
+  <meta property="og:type" content="page.type">
   {% endif %}
 
   <meta property="og:image" content=" サムネイル画像のURL" />
